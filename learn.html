@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		.visible{
+			display: none;
+		}
+		.head{
+			background-color: blanchedalmond;
+			margin: 10px 0;
+			cursor: pointer;
+		}
+		.content{
+			background-color: cadetblue;
+		}
+		.one{
+			background-color: firebrick;
+			
+		}
+		.two{
+			background-color: dodgerblue;
+			height: 50px;
+			/*margin: 150px 0 150px;*/
+		}
+		.three{
+			background-color: darkseagreen;
+			
+		}
+		header{
+			margin: 20px 0;
+		}
+		.wrap{
+			background-color: darkolivegreen;
+			max-width: 1024px;
+			min-width: 768px;
+			height: inherit;
+			margin: 0 auto;
+			
+			color: aliceblue;
+			text-align: justify;
+		}
+	</style>
+</head>
+<body>
+<!--Comment--> the coment
+<header>
+	<div class="wrap">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas, ipsum. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet facere aliquam tenetur, ratione voluptate tempora voluptatibus? Iusto quaerat, natus nihil. Accusamus asperiores ducimus expedita, eligendi est provident fuga nostrum eaque dolores voluptatum, iste quod ratione officiis! Magnam distinctio nulla molestiae ipsa! Vero quos fuga impedit porro autem veritatis repudiandae? Voluptatibus sed qui laboriosam, magni nemo temporibus expedita mollitia, accusamus iure at possimus minus distinctio beatae doloremque dolor ipsam. Beatae numquam a eaque magni veritatis quod laboriosam, cupiditate odio, culpa vitae ea consectetur sapiente placeat omnis animi unde. Dolorem repellendus illo unde illum, incidunt velit facilis eius deleniti, vitae totam iusto.</div>
+</header>
+<div class="one"> consectetur adipisicing elit. Perspiciatis, nisi!
+	<div class="two">
+<!--
+		<li class="three">some text</li>
+		<li class="three">some text</li>
+		<li class="three">some text</li>
+-->
+	</div>
+</div>
+	<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi, vero dignissimos. Ut necessitatibus distinctio obcaecati suscipit dolorum? Perspiciatis non</div>
+	<div class="head" data-age='18'>Some head 1</div>
+	<div class="head">Some head 2</div>
+	<div class="content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit aspernatur temporibus, ipsum eius pariatur, animi iure saepe provident molestiae harum cupiditate tempora sapiente. Assumenda atque cupiditate quasi dignissimos, iure, et aperiam est illum magni veniam consequatur ad fugit, harum laboriosam!</div>
+	<div class="head">Some head 3</div>
+	<div class="content">Lorem ipsum dolor reprehenderit neque blanditiis maxime. Unde deserunt quibusdam illum veniam, molestiae voluptates ut non assumenda error commodi quae sint dolor!</div>
+	
+	<script>
+		var content = document.querySelector('.content');
+		var head = document.querySelectorAll('.head');
+		
+		head.onclick = function(){
+			for(var i = 0; i < head.length; i++){
+				head[i].nextElementSibling.classList.toggle('visible');
+			//var heads = document.querySelectorAll('.head');
+			//for(var i = 0; i < heads.length; i++){
+//				this.nextElementSibling.classList.toggle('visible');
+//				console.log(head[i]);
+			//	heads[i].nextElementSibling.classList.toggle('visible');
+			//}
+			head.innerHTML = (!head) ? '[Close]' : '[Open]';
+			}
+		};
+	</script>
+	after script
+</body>
+</html>
